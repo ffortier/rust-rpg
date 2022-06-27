@@ -1,0 +1,19 @@
+{
+  "name": "rust-rpg",
+  "version": "1.0.0",
+  "description": "Some game in rust",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffortier/rust-rpg.git"
+  },
+  "author": "Francis Fortier <francis.fortier@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ffortier/rust-rpg/issues"
+  },
+  "homepage": "https://github.com/ffortier/rust-rpg#readme"
+}
