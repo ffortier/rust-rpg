@@ -2,9 +2,14 @@
   "name": "rust-rpg",
   "version": "1.0.0",
   "description": "Some game in rust",
-  "main": "index.js",
+  "workspaces": [
+    "./packages/*/pkg"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:designer": "cd packages/rust-rpg-designer && wasm-pack build --target web --scope rust-rpg",
+    "start:designer": "concurrently npm:build:designer:w vite",
+    "build:designer:w": "cd packages/rust-rpg-designer && cargo watch -- wasm-pack build --target web --scope rust-rpg"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/ffortier/rust-rpg/issues"
   },
-  "homepage": "https://github.com/ffortier/rust-rpg#readme"
+  "homepage": "https://github.com/ffortier/rust-rpg#readme",
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "sass": "^1.53.0",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.13",
+    "wasm-pack": "^0.10.3"
+  },
+  "dependencies": {
+    "@fluentui/web-components": "^2.5.3"
+  }
 }

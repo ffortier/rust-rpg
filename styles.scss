@@ -1,0 +1,18 @@
+.designer {
+  .level {
+    display: inline-grid;
+    background-color: black;
+    gap: 1px;
+    grid-template-columns: repeat(var(--level-cols), 32px);
+
+    .tile {
+      height: 32px;
+      width: 32px;
+      background-color: pink;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+}
