@@ -8,6 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:designer": "cd packages/rust-rpg-designer && wasm-pack build --target web --scope rust-rpg",
+    "build:game": "cd packages/rust-rpg-game && wasm-pack build --target web --scope rust-rpg",
     "start:designer": "concurrently npm:build:designer:w vite",
     "build:designer:w": "cd packages/rust-rpg-designer && cargo watch -- wasm-pack build --target web --scope rust-rpg"
   },

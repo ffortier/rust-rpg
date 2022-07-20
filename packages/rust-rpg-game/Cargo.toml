@@ -3,6 +3,38 @@ name = "rust-rpg-game"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dev-dependencies]
+mockall = "0.11.1"
+wasm-bindgen-test = "0.3.31"
 
 [dependencies]
+wasm-bindgen = "0.2.81"
+wasm-bindgen-futures = "0.4.31"
+anyhow = "1.0.58"
+thiserror = "1.0.31"
+js-sys = "0.3.58"
+console_log = "0.2.0"
+log = "0.4.17"
+console_error_panic_hook = "0.1.7"
+mockall_double = "0.3.0"
+
+[dependencies.web-sys]
+version = "0.3.58"
+features = [
+    "HtmlCanvasElement",
+    "CanvasRenderingContext2d",
+    "HtmlImageElement",
+    "Window",
+    "Document",
+    "Headers",
+    "Request",
+    "RequestInit",
+    "ImageData",
+    "RequestMode",
+    "Response",
+    "Blob",
+    "Url",
+]
