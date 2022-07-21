@@ -1,4 +1,6 @@
 use anyhow::Result;
+pub use assets_loader::AssetsLoader;
+pub use convex_hull::ConvexHull;
 use game_state::{Game, MainGame};
 #[mockall_double::double]
 use js_adapter::animation_frame;
@@ -12,6 +14,7 @@ mod convex_hull;
 mod error;
 mod game_state;
 mod js_adapter;
+mod math_vector;
 mod renderer;
 
 #[wasm_bindgen(start)]
